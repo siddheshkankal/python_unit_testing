@@ -1,0 +1,9 @@
+Exercise 13
+The Programmer class is implemented in the employees.py file. To the TestProgrammer class add:
+
+a test named test_get_random_tech_mocked_cpp(), which tests the Programmer class's get_random_tech() method. Since the result of the method is nondeterministic, mock this method with the @patch.object() decorator so that its call returns the technology name 'c ++'.
+
+
+
+You only need to define the appropriate test. During the solution verification, the tests are run and in case of any errors, the test report will be printed to the console.
+

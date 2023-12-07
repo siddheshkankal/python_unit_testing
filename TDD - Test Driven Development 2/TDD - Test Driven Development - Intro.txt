@@ -1,0 +1,62 @@
+TDD - Test Driven Development - Intro
+Test-Driven Development (TDD) is a software development methodology that emphasizes writing tests for code before writing the code itself. The primary goal of TDD is to ensure that the software being developed meets the requirements and functions correctly.
+
+
+
+TDD follows a cycle known as the "Red-Green-Refactor" cycle, consisting of three main steps:
+
+Red Phase:
+
+In the Red phase, you start by writing a failing test case that defines the desired behavior of a small piece of functionality.
+
+The test case should initially fail because the functionality it is testing hasn't been implemented yet. This "red" state indicates that the test is correctly identifying missing functionality.
+
+Green Phase:
+
+In the Green phase, you implement the minimum amount of code necessary to make the failing test pass.
+
+The goal is to write just enough code to make the test case turn from "red" to "green." This ensures that the code you write is driven by the requirements specified in the test.
+
+Refactor Phase:
+
+In the Refactor phase, you refactor the code to improve its design, readability, and maintainability while ensuring that the test continues to pass.
+
+The key here is to make improvements without introducing new functionality or breaking existing functionality.
+
+
+
+The TDD cycle is repeated iteratively, with new tests and code added for additional functionality. Each iteration begins with writing a test that describes the desired functionality, and then implementing the code to satisfy that test. Key principles and benefits of Test-Driven Development (TDD) include:
+
+Improved Code Quality:
+
+TDD encourages writing clean, modular, and well-structured code.
+
+Tests act as documentation, providing clear specifications for the code's behavior.
+
+Early Detection of Issues:
+
+TDD helps identify and fix defects early in the development process, reducing the cost of fixing issues later.
+
+Regression Testing:
+
+TDD ensures that as you add new code, you can quickly run all existing tests to catch regressions (unintended side effects on existing functionality).
+
+Incremental Development:
+
+TDD promotes an incremental approach to development, allowing you to build and test one small piece of functionality at a time.
+
+Confidence in Changes:
+
+With a comprehensive test suite, developers can confidently make changes to the codebase, knowing that tests will catch any introduced issues.
+
+Design Improvement:
+
+TDD encourages you to think about the design of your code from the beginning, leading to more maintainable and extensible software.
+
+Collaboration:
+
+TDD facilitates collaboration among team members by providing a common understanding of the software's behavior through its tests.
+
+
+
+While TDD is a powerful approach, it may require a mindset shift for some developers and additional time upfront to write tests. However, the long-term benefits in terms of code quality, reliability, and maintainability often outweigh the initial investment. TDD is commonly used in Agile and DevOps environments to ensure the continuous delivery of high-quality software.

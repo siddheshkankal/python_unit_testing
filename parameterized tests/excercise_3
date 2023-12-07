@@ -1,0 +1,23 @@
+Exercise 3
+The file rectangle.py implements three functions:
+
+validate_rectangle_args()
+
+area()
+
+perimeter()
+
+
+
+Create a class named TestArea that inherits from unittest.TestCase and implement a test method named test_area(). Using the parameterized tests in the created method, make the following assertions:
+
+check if calling the function area(1, 5) returns the value 5
+
+check if calling the function area(2, 10) returns the value 20
+
+check if calling the function area(100, 50) returns the value 5000
+
+
+
+You only need to define the class and the appropriate tests. During the solution verification, the tests are run and in case of any errors, the test report will be printed to the console.
+

@@ -1,0 +1,60 @@
+parameterized module - Intro
+In the unittest framework in Python, parameterized tests allow you to run the same test case multiple times with different input data. This is particularly useful when you want to test a specific function or method with a variety of test cases without writing separate test methods for each case. Parameterized tests help reduce code duplication and make it easier to maintain and extend your test suite. You can create parameterized tests using various third-party libraries, and one common library for this purpose is parameterized.
+
+
+
+Here's how you can use the parameterized library to create parameterized tests in unittest:
+
+Install the parameterized library:
+
+You need to install the parameterized library, which is not included in the standard library. You can install it using pip:
+
+pip install parameterized
+
+
+Import the parameterized decorator:
+
+Import the parameterized decorator from the parameterized module in your test file.
+
+from parameterized import parameterized
+
+
+Use the parameterized decorator:
+
+Apply the parameterized decorator to a test method. Inside the decorator, provide the test cases as a list of tuples or other iterable data structures. Each tuple should contain the arguments that you want to pass to the test method.
+
+import unittest
+from parameterized import parameterized
+ 
+def add(x, y):
+    return x + y
+ 
+class TestAddition(unittest.TestCase):
+ 
+    @parameterized.expand([
+        (1, 2, 3),
+        (0, 0, 0),
+        (-1, 1, 0),
+        (10, -5, 5),
+    ])
+    def test_addition(self, a, b, expected_result):
+        result = add(a, b)
+        self.assertEqual(result, expected_result)
+
+
+In this example, the test_addition method is decorated with parameterized.expand, and it is run with various input combinations defined in the list of tuples.
+
+
+
+Run the tests:
+
+Run your tests using the unittest test runner, just as you would with regular test methods.
+
+python -m unittest your_test_module.py
+
+
+The test runner will execute the test_addition method for each set of input data provided in the decorator.
+
+
+
+Parameterized tests can help you efficiently test multiple scenarios with minimal code duplication. They make your test suite more concise and easier to maintain, especially when you have a large number of test cases with similar test logic.

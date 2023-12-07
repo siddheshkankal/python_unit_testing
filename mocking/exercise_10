@@ -1,0 +1,17 @@
+Exercise 10
+The implementation of the get_code_with_day() function in the code_generator.py file is given. Implement a class named TestGetCodeWithDay that inherits from unittest.TestCase with a test method named test_get_code_with_day_with_mocked_friday(). The purpose of this method is to test the get_code_with_day() function. Since this function works pseudo-randomly, we cannot predict the exact result every time.
+
+
+
+Using the @patch() decorator twice, mock the operation of the random.randint method and the code_generator.get_today_name function within test_get_code_with_day_with_mocked_friday() so that in the test method, calling:
+
+random.randint() returns 5
+
+code_generator.get_today_name() returns 'FRI'
+
+Then assert the result of calling get_code_with_day() with the expected result 'CX-5-FRI'.
+
+
+
+You only need to define the class and the appropriate tests. During the solution verification, the tests are run and in case of any errors, the test report will be printed to the console.
+

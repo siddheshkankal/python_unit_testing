@@ -1,0 +1,36 @@
+Exercise 13
+Suppose you have the function that reverses the keys and values in a dictionary:
+
+
+
+def reverse_dict(input_dict):
+    if not isinstance(input_dict, dict):
+        raise TypeError("Input must be a dictionary")
+    for key, value in input_dict.items():
+        if not isinstance(value, int):
+            raise ValueError("All values must be integers")
+    return {value: key for key, value in input_dict.items()}
+
+
+This function takes a dictionary with string keys and integer values as input, checks if the input is a dictionary using the isinstance function, and raises a TypeError if it is not. It then checks if all values in the dictionary are integers, and raises a ValueError if any of them are not. It then creates a new dictionary with the keys and values reversed using a dictionary comprehension, and returns the new dictionary.
+
+
+
+Write the parameterized test using the unittest framework. Define a class called TestReverseDict that inherits from unittest.TestCase. Then define the following test cases:
+
+{"one": 1, "two": 2, "three": 3} -> {1: "one", 2: "two", 3: "three"}
+
+{"a": 0, "b": -1, "c": 10} -> {0: "a", -1: "b", 10: "c"}
+
+{} -> {}
+
+{"one": "1", "two": 2, "three": 3} -> None
+
+["not a dictionary"] -> None
+
+{"one": 1, "two": "2", "three": 3} -> None
+
+{"one": 1, "two": 2, "three": "3"} -> None
+
+{"one": 1, "two": 2, 3: "three"} -> None
+

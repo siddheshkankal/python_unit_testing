@@ -1,0 +1,2 @@
+Parameterized tests - Intro
+In the unittest framework in Python, parameterized tests allow you to run the same test case multiple times with different input data. This is particularly useful when you want to test a specific function or method with a variety of test cases without writing separate test methods for each case. Parameterized tests help reduce code duplication and make it easier to maintain and extend your test suite. You can create parameterized tests using various third-party libraries, and one common library for this purpose is parameterized.

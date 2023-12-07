@@ -1,0 +1,77 @@
+Organizing tests into test suites - Intro
+In the unittest framework in Python, a test suite is a collection of test cases and test methods that are grouped together for organized and systematic testing. Test suites allow you to organize your tests, specify the order in which tests are executed, and group related tests for easier management. unittest provides a built-in way to create and use test suites. Here's how test suites work in unittest:
+
+
+
+Creating a Test Suite: To create a test suite, you can create an instance of the unittest.TestSuite class. This object serves as a container for test cases or other test suites.
+
+import unittest
+ 
+# Create a test suite
+suite = unittest.TestSuite()
+
+
+Adding Test Cases to the Suite: You can add individual test cases or test methods to the test suite using the addTest() method of the TestSuite object.
+
+suite.addTest(MyTestCase('test_method1'))
+suite.addTest(MyTestCase('test_method2'))
+
+
+In the code above, MyTestCase is the name of the test case class, and 'test_method1' and 'test_method2' are the names of specific test methods within that test case.
+
+
+
+Creating a Test Loader: To make it easier to add multiple test cases to a suite, you can use a test loader. A test loader is an instance of a unittest.TestLoader class that can discover and load test cases automatically from modules.
+
+import unittest
+ 
+# Create a test loader
+loader = unittest.TestLoader()
+ 
+# Load test cases from a test module
+suite = loader.loadTestsFromTestCase(MyTestCase)
+
+
+In this example, the loadTestsFromTestCase method of the test loader loads all test methods from the MyTestCase class into the test suite.
+
+
+
+Running the Test Suite: You can run the test suite using the unittest.TextTestRunner class, which provides a command-line interface for running tests and displaying results.
+
+import unittest
+ 
+# Create a test loader
+loader = unittest.TestLoader()
+ 
+# Load test cases from a test module
+suite = loader.loadTestsFromTestCase(MyTestCase)
+ 
+# Create a test runner and run the suite
+runner = unittest.TextTestRunner()
+runner.run(suite)
+
+
+This will execute all the test methods within the test suite and display the results in the console.
+
+
+
+Grouping Test Suites: You can also create a test suite that contains other test suites. This is useful for organizing tests into categories or modules.
+
+import unittest
+ 
+# Create test loaders and load test cases
+loader1 = unittest.TestLoader()
+suite1 = loader1.loadTestsFromTestCase(MyTestCase1)
+ 
+loader2 = unittest.TestLoader()
+suite2 = loader2.loadTestsFromTestCase(MyTestCase2)
+ 
+# Create a master test suite containing the individual test suites
+master_suite = unittest.TestSuite([suite1, suite2])
+
+
+In this example, master_suite contains both suite1 and suite2, which can be different sets of tests.
+
+
+
+Test suites in unittest are a powerful way to organize and manage your tests, especially when you have a large number of test cases. They allow you to group related tests, specify the order of execution, and run subsets of your tests as needed for different testing scenarios.

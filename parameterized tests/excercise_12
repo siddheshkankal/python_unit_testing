@@ -1,0 +1,33 @@
+Exercise 12
+Suppose you have the function that removes all vowels from a string:
+
+
+
+def remove_vowels(input_str):
+    if not isinstance(input_str, str):
+        raise TypeError("Input must be a string")
+    vowels = ["a", "e", "i", "o", "u"]
+    return "".join(
+        [char for char in input_str if char.lower() not in vowels]
+    )
+
+
+This function takes a string as input, checks if the input is a string using the isinstance() function, and raises a TypeError if it is not. It then defines a list of vowels, uses a list comprehension to remove all vowels from the input string, and returns the resulting string.
+
+
+
+Write the parameterized test using the unittest framework. Define a class called TestRemoveVowels that inherits from unittest.TestCase. Then define five test cases:
+
+"hello world" -> "hll wrld"
+
+"Python is awesome" -> "Pythn s wsm"
+
+"aeiou" -> ""
+
+"" -> ""
+
+["not a string"] -> None
+
+{"not a string": "value"} -> None
+
+None -> Nonee

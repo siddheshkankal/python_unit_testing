@@ -1,0 +1,23 @@
+Exercise 7
+The file rectangle.py implements three functions:
+
+validate_rectangle_args()
+
+area()
+
+perimeter()
+
+
+
+Implement a test method called test_perimeter_invalid_type_should_raise_type_error() in the TestPerimeter class. Using the parameterized tests in the created method, implement the following assertions:
+
+check if calling the function perimeter(4, '5') returns TypeError
+
+check if calling the function perimeter('2', 8) returns TypeError
+
+check if calling the function perimeter('two', 'three') returns TypeError
+
+
+
+You only need to define the appropriate tests. During the solution verification, the tests are run and in case of any errors, the test report will be printed to the console.
+

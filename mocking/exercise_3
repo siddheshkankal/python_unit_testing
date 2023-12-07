@@ -1,0 +1,11 @@
+Exercise 3
+The method random.choice() is mocked (from the random built-in module). Display the value of the call_count attribute of the mocked random.choice() method. Then call the random.choice() method once and display the value of the call_count attribute to the console again.
+
+
+
+Expected result:
+
+
+
+0
+1

@@ -1,0 +1,23 @@
+Exercise 4
+The file rectangle.py implements three functions:
+
+validate_rectangle_args()
+
+area()
+
+perimeter()
+
+
+
+Add the second test method to the TestArea class named test_area_incorrect_type_should_raise_type_error(). Using the parameterized tests in the created method, make the following assertions:
+
+check if calling the function area(1, '5') returns TypeError
+
+check if calling the function area('2', 10) returns TypeError
+
+check if calling the function area('two', 'four') returns TypeError
+
+
+
+You only need to define the appropriate tests. During the solution verification, the tests are run and in case of any errors, the test report will be printed to the console.
+

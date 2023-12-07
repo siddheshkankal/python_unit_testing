@@ -1,0 +1,15 @@
+Exercise 1
+Using the unittest.mock library import the Mock class. Then create an instance of this class with the name 'first_mock' (the name argument of the Mock class) and assign it to a variable named mock.
+
+Print the contents of the mock variable to the console.
+
+
+
+Expected result:
+
+
+
+<Mock name='first_mock' id='29821992'>
+
+
+Note: The id value may vary.

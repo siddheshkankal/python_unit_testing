@@ -1,0 +1,23 @@
+Exercise 2
+The following code snippet is given:
+
+
+
+import random
+from unittest.mock import Mock
+ 
+ 
+techs = ['python', 'sql', 'java', 'aws', 'c++']
+
+
+The random.choice() method selects a random element from the iterable object.
+
+Mock the random.choice() method from the random built-in module so that when this method is called, it returns 'aws' each time. Use the return_value argument of the Mock class for this purpose. Then call the random.choice() method and print the result to the console.
+
+
+
+Expected result:
+
+
+
+aws

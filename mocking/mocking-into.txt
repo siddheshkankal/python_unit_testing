@@ -1,0 +1,59 @@
+Mocking - Intro
+Mocking in unittest in Python is a technique used to replace real objects or functions with mock objects or functions during testing. Mocking allows you to isolate the code under test and control the behavior of external dependencies, such as external services, databases, or functions that have side effects, without actually invoking them. This is particularly useful for unit testing, as it helps you create controlled and predictable testing environments. The unittest library provides the unittest.mock module (also known as unittest.mock or simply mock in Python 3.3 and later) for creating and using mock objects.
+
+
+
+Here's how to use mocking in unittest:
+
+
+
+Import the unittest.mock module: In Python 3.3 and later, the unittest.mock module is included in the standard library. You can import it as follows:
+
+from unittest.mock import Mock, MagicMock, patch
+
+
+For older versions of Python, you can install the mock library using pip and import it as from mock import Mock, MagicMock, patch.
+
+
+
+Creating Mock Objects: You can create mock objects using the Mock class or its subclasses, such as MagicMock. Mock objects mimic the behavior of real objects or functions but allow you to control their behavior during testing.
+
+# Create a basic mock object
+mock_obj = Mock()
+ 
+# Create a MagicMock object that behaves like a real object
+magic_mock_obj = MagicMock()
+
+
+Configuring Mock Behavior: You can configure the behavior of mock objects by assigning return values, side effects, or exceptions that they should raise when called. You can also inspect how they were called.
+
+# Configure the mock to return a specific value when called
+mock_obj.return_value = 42
+ 
+# Configure the mock to raise an exception when called
+mock_obj.side_effect = Exception("Mocked Exception")
+ 
+# Inspect how the mock was called
+mock_obj.assert_called_with(1, 2, keyword_arg="value")
+
+
+Using Patching for Context Manager: To temporarily replace an object or function with a mock during a specific scope of code, you can use the patch context manager.
+
+from unittest.mock import patch
+ 
+with patch('module_name.function_name', new=mock_obj):
+    # Code that uses the mocked function
+
+
+In this example, module_name.function_name should be the fully qualified name of the function you want to replace with the mock, and mock_obj is the mock object you want to use.
+
+
+
+Verifying Calls: You can use various methods like assert_called_with, assert_called_once_with, and assert_not_called to verify how the mock object was called during the test.
+
+mock_obj.assert_called_with(1, 2)
+mock_obj.assert_called_once_with(1, 2)
+mock_obj.assert_not_called()
+
+
+Mocking is particularly useful for testing code that interacts with external systems or resources, as it allows you to create controlled test scenarios without the need for real external resources. It also helps in isolating the code under test, making your tests more focused and less prone to ext

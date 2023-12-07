@@ -1,0 +1,40 @@
+Exercise 1
+Suppose you have the function that sends an HTTP GET request and retries up to 3 times:
+
+
+
+import requests
+import time
+ 
+def get_content(url):
+    for attempt in range(3):
+        try:
+            response = requests.get(url)
+            response.raise_for_status()
+            return response.content.decode("utf-8")
+        except Exception:
+            time.sleep(1)
+    raise Exception(f"Failed to get content from {url}")
+
+
+This function takes a URL as input, and uses a for loop to retry the request up to 3 times. It uses the requests.get() function to send an HTTP GET request to the given URL, and raises an exception if the response status code indicates an error (using the raise_for_status() method). It then decodes the response content using UTF-8 encoding, and returns it as a string. If the request fails after 3 attempts, it raises an exception with a message indicating the failure.
+
+
+
+Define a class called TestGetContent that inherits from unittest.TestCase. Write the unit tests using the unittest framework and the unittest.mock library to mock the requests library.
+
+
+
+You should use the patch decorator from the unittest.mock library to mock the requests.get() function. Define two test cases, one for a successful request and one for a request that fails and needs to be retried:
+
+test_success()
+
+test_retry()
+
+
+
+In the successful request test case, create a MagicMock object to represent the response from the requests.get() function, and set its status code, content, and return value. Then call the get_content() function with a URL, and use the assertEqual() method to check that the result is the expected string, and the assert_called_once_with() method to check that the requests.get() function was called once with the correct URL.
+
+
+
+In the retry test case, set up the requests.get() function to raise an exception on the first two attempts, and return a MagicMock object representing a successful response on the third attempt. Then call the get_content() function with a URL, and use the assertEqual() method to check that the result is the expected string, and the assertEqual() to check that the requests.get() function was called three times.

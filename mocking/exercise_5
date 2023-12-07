@@ -1,0 +1,10 @@
+Exercise 5
+The implementation of the Programmer class is given. An instance of this class named programmer is also created. Using the patch() function from the unittest.mock library and the context manager, mock the random.choice() method so that it returns the technology name 'sql' every time it is called within the context manager. Then, within the context manager, call the get_random_tech() method on the programmer instance and print the returned value to the console.
+
+
+
+Expected value:
+
+
+
+sql

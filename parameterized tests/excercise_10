@@ -1,0 +1,23 @@
+Exercise 10
+Suppose you have the function that calculates the lengths of the strings in a list:
+
+
+
+def string_lengths(strings):
+    return list(map(len, strings))
+
+
+This function takes a list of strings as input, uses a map() function to calculate the length of each string, and returns a list of the resulting lengths.
+
+
+
+Write the parameterized test using the unittest framework. Define a class called TestStringLengths that inherits from unittest.TestCase. Then define four test cases:
+
+['hello', 'world'] -> [5, 5]
+
+['python', 'is', 'awesome'] -> [6, 2, 7]
+
+[] -> []
+
+['1', '22', '333', '4444'] -> [1, 2, 3, 4]
+

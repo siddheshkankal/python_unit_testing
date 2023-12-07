@@ -1,0 +1,22 @@
+Exercise 6
+The file rectangle.py implements three functions:
+
+validate_rectangle_args()
+
+area()
+
+perimeter()
+
+
+
+Create a class named TestPerimeter that inherits from unittest.TestCase and implement a test method named test_perimeter(). Using the parameterized tests in the created method, implement the following assertions:
+
+check if calling the function perimeter(1, 5) returns the value 12
+
+check if calling the function perimeter(2, 10) returns the value 24
+
+check if calling the function perimeter(100, 50) returns the value 300
+
+
+
+You only need to define the class and the appropriate tests. During the solution verification, the tests are run and in case of any errors, the test report will be printed to the console.

@@ -1,0 +1,44 @@
+Exercise 4
+Let's say you have a class called WeatherAPI that fetches weather data from a third-party API, and a class called WeatherAnalyzer that analyzes the weather data to determine if it's going to rain. Here's the code for the WeatherAPI and WeatherAnalyzer classes:
+
+
+
+import requests
+ 
+ 
+class WeatherAPI:
+    def __init__(self, api_key):
+        self.api_key = api_key
+ 
+    def get_weather(self, city):
+        url = (
+            f"https://api.openweathermap.org/data/2.5/weather"
+            f"?q={city}&appid={self.api_key}"
+        )
+        response = requests.get(url)
+        return response.json()
+ 
+ 
+class WeatherAnalyzer:
+    def is_raining(self, weather_data):
+        return weather_data["weather"][0]["main"] == "Rain"
+
+
+Define a class called TestWeatherAnalyzer that inherits from unittest.TestCase. Write the unit tests using the unittest framework and the unittest.mock library to mock the weather data. In the TestWeatherAnalyzer class define one test case named test_is_raining().
+
+
+
+Create a mock weather data dictionary, for example:
+
+
+
+weather_data = {
+    'weather': [
+        {
+            'main': 'Rain'
+        }
+    ]
+}
+
+
+Then, create a mock weather API object using mock.MagicMock.  Specify that the get_weather() method of the mock weather API should return the mock weather data. Create a WeatherAnalyzer instance using the mock weather API, and call the is_raining() method with the city name "London". Then, assert that the result is True.

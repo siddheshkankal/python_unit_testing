@@ -1,0 +1,38 @@
+Exercise 2
+Suppose you have the function that fetches the current weather data:
+
+
+
+import requests
+ 
+ 
+def get_weather(location):
+    url = (
+        f"http://api.openweathermap.org/data/2.5/weather"
+        f"?q={location}&appid=<your API key>"
+    )
+    response = requests.get(url)
+    response.raise_for_status()
+    data = response.json()
+    return {
+        "location": data["name"],
+        "temperature": data["main"]["temp"],
+        "weather_description": data["weather"][0]["description"],
+        "humidity": data["main"]["humidity"],
+    }
+
+
+This function takes a location parameter as input, constructs a URL for the OpenWeatherMap API with the location and your API key, and uses the requests.get() function to fetch the weather data. It raises an exception if the response status code indicates an error (using the raise_for_status() method), and parses the response data as JSON using the json method. It then constructs a dictionary containing the location name, temperature, weather description, and humidity from the response data, and returns it.
+
+
+
+Define a class called TestGetWeather that inherits from unittest.TestCase. Write the unit tests using the unittest framework and the unittest.mock library to mock the requests library.
+
+
+
+You should use the patch decorator from the unittest.mock library to mock the requests.get() function.
+
+
+
+Define test case only for a successful API response. In the successful response test case, create a MagicMock object to represent the response from the requests.get() function, and set its status code, JSON data, and return value. Then call the get_weather() function with a location, and use the assertEqual() method to check that the result is a dictionary containing the correct information.
+

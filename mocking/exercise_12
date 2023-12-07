@@ -1,0 +1,11 @@
+Exercise 12
+The Programmer class is implemented in the employees.py file. Create a TestProgrammer class that inherits from the unittest.TestCase class and implements:
+
+a setUp() method that creates an instance of the Programmer class (assign this instance to the TestProgrammer class attribute named programmer). To this instance using the add_tech() method add the following technology names: 'python',  'sql',  'java',  'c++',  'aws'
+
+a test named test_get_random_tech_mocked_python() that tests the Programmer class's get_random_tech() method. Since the output of the method is nondeterministic, mock this method with the @patch.object() decorator so that its call returns the technology name 'python'.
+
+
+
+You only need to define the class and the appropriate tests. During the solution verification, the tests are run and in case of any errors, the test report will be printed to the console.
+

@@ -1,0 +1,35 @@
+Exercise 2
+In the file named tax.py the implementation of the calc_tax() function is given. Try to simplify the solution of the previous exercise by using parameterized tests and the unittest framework.
+
+
+
+Steps:
+
+Implement a test method named test_calc_tax() in the TestCalcTax class.
+
+In the test_calc_tax() method define four test cases (amount, tax_rate, age, result):
+
+
+(60000, 0.2, 18, 5000)
+(60000, 0.2, 19, 12000)
+(60000, 0.2, 65, 12000)
+(60000, 0.2, 66, 8000)
+
+
+And assign to a list named test_cases.
+
+Using the for loop and the context manager define the test cases as follows:
+
+
+for amount, tax_rate, age, expected in test_cases:
+    with self.subTest(
+        amount=amount,
+        tax_rate=tax_rate,
+        age=age,
+        expected=expected,
+    ):
+    pass
+
+
+You only need to define the class and the appropriate tests. During the solution verification, the tests are run and in case of any errors, the test report will be printed to the console.
+

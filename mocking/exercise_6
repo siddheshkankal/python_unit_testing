@@ -1,0 +1,10 @@
+Exercise 6
+The implementation of the Programmer class is given. An instance of this class named programmer is also created. At the module level implement a function called test_get_random_tech() that will return the result of calling the get_random_tech() method on the programmer instance. Then, using the @patch decorator from the unittest.mock library, decorate the test_get_random_tech() function and mock the random.choice method so that each time the random.choice method is called inside test_get_random_tech(), the technology name 'c++' is returned. Then call the test_get_random_tech() function and print the result to the console.
+
+
+
+Expected result:
+
+
+
+c++

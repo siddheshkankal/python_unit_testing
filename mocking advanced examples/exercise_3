@@ -1,0 +1,38 @@
+Exercise 3
+Suppose you are building a program that fetches data from an external API and performs some operations on it. You want to write tests for the program using unittest and mocking to ensure that it works as expected.
+
+
+
+You've created a function that fetches data from the API (see my_module.py file):
+
+
+
+import requests
+ 
+ 
+def fetch_data():
+    response = requests.get('https://example.com/data')
+    if response.status_code == 200:
+        return response.json()
+    else:
+        return None
+
+
+Next, you've created a function that processes the data (see my_module.py file):
+
+
+
+def get_average_value(data, field):
+    values = [item[field] for item in data if field in item]
+    if len(values) > 0:
+        return sum(values) / len(values)
+    else:
+        return None
+
+
+Create a class named TestMyModule that tests these functions using unittest and mocking:
+
+In the test_fetch_data() method, mock the requests library to return a specific response (for example [{'value': 1}, {'value': 2}, {'value': 3}]). This ensures that the test is not dependent on the external API and that the fetch_data() function works as expected.
+
+In the test_get_average_value() method, test three different scenarios: valid data, missing field, and no data. This ensures that the get_average_value() function works as expected for different inputs.
+

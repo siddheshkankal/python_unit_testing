@@ -1,0 +1,11 @@
+Exercise 9
+The implementation of the get_message() function is given in message_generator.py file. Add a test method named test_get_message_with_monday() to the TestGetMessage class. The method is designed to test the get_message() function. This function uses the message_generator.get_today_name() function and works depending on when it is called.
+
+
+
+Using the @patch() decorator mock the message_generator.get_today_name function within test_get_message_with_monday(), so that in the test method this function returns the value 'Monday'. Then assert the result of calling the get_message() function with the expected result 'Hello Monday!'.
+
+
+
+You only need to define the appropriate tests. During the solution verification, the tests are run and in case of any errors, the test report will be printed to the console.
+

@@ -1,0 +1,21 @@
+Exercise 1
+In the file named tax.py the implementation of the calc_tax() function is given. Create a class named TestCalcTax that inherits from unittest.TestCase and implement the following four tests:
+
+test_calc_tax_twenty_percent_and_eighteen_age() - checks if for arguments:
+60000, 0.2, 18 the return value is equal to 5000
+
+
+test_calc_tax_twenty_percent_and_nineteen_age() - checks if for arguments:
+60000, 0.2, 19 the return value is equal to12000
+
+
+test_calc_tax_twenty_percent_and_sixty_five_age() - checks if for arguments:
+60000, 0.2, 65 the return value is equal to 12000
+
+
+test_calc_tax_twenty_percent_and_sixty_six_age() - checks if for arguments:
+60000, 0.2, 66 the return value is equal to 8000
+
+
+
+You only need to define the class and the appropriate tests. During the solution verification, the tests are run and in case of any errors, the test report will be printed to the console.

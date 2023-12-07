@@ -1,0 +1,10 @@
+Exercise 4
+The implementation of the Programmer class is given. An instance of this class named programmer is also created. Using the unittest.mock library, mock the random.choice() method so that it returns the name of the technology 'python' each time it is called. Then call the get_random_tech() method on the programmer instance and print the returned value to the console.
+
+
+
+Expected result:
+
+
+
+python

@@ -1,0 +1,9 @@
+Exercise 14
+The Programmer class is implemented in the employees.py file. To the TestProgrammer class add:
+
+a test named test_display_random_tech_mocked() that tests the display_random_tech() method of the Programmer class. Since the result of the method is nondeterministic and depends on calling the get_random_tech() method, mock the get_random_tech() method with the @patch.object() decorator so that its call returns the technology name 'python'.
+
+
+
+You only need to define the appropriate test. During the solution verification, the tests are run and in case of any errors, the test report will be printed to the console.
+

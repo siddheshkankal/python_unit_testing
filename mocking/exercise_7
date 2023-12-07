@@ -1,0 +1,10 @@
+Exercise 7
+The implementation of the get_code() function is given in the code_generator.py file. Implement a class named TestGetCode that inherits from unittest.TestCase and implements a test method named test_get_code_mock_should_return_30(). The method is designed to test the get_code() function. Since the function works pseudo-randomly, we cannot predict its exact result every time.
+
+
+
+Using the @patch() decorator mock the random.randint method within test_get_code_mock_should_should_return_30() so that in the test method, calling this method returns 30. Then, assert the result of calling get_code() with the expected result 'CX-30'.
+
+
+
+You only need to define the class and the appropriate tests. During the solution verification, the tests are run and in case of any errors, the test report will be printed to the console.
